@@ -49,9 +49,24 @@ might need to look up the exact commands to make them happen.
 called 'test'. Switch to this database with the 'use' command. What
 tables does it have?
 
+| information_schema |
+| mysql              |
+| performance_schema |
+| test 
+
 2. Now switch to the built-in 'mysql' database. What are the columns
 in the 'func' table? List all pertinent info. How many records exist
 in the table?  What do you suppose this table is used to store?
++-------+------------------------------+------+-----+---------+-------+
+| Field | Type                         | Null | Key | Default | Extra |
++-------+------------------------------+------+-----+---------+-------+
+| name  | char(64)                     | NO   | PRI |         |       |
+| ret   | tinyint(1)                   | NO   |     | 0       |       |
+| dl    | char(128)                    | NO   |     |         |       |
+| type  | enum('function','aggregate') | NO   |     | NULL    |       |
++-------+------------------------------+------+-----+---------+-------+
+
+0 records, I think this table is to store functions
 
 3. Create a new database called "us_states". In this database, add a
 table called "states". Add 5 columns to the table: state name (a
@@ -68,6 +83,50 @@ Run queries to:
 
 Copy/paste the result of running these queries as part of your homework submission.
 
++----------------+------------+----+----------+-------------+
+| stateName      | population | id | timezone | averageTemp |
++----------------+------------+----+----------+-------------+
+| Florida        |      30000 |  1 | Eastern  |          90 |
+| Maine          |       2000 |  2 | Eastern  |          30 |
+| Colorado       |       2500 |  3 | Mountain |          30 |
+| California     |       9500 |  4 | Pacific  |          70 |
+| Tennessee      |       3500 |  5 | Central  |          50 |
+| Virgina        |       4500 |  6 | Eastern  |          45 |
+| Ohio           |       2250 |  7 | Eastern  |          35 |
+| New York       |      29250 |  8 | Eastern  |          42 |
+| Arizona        |       2950 |  9 | Mountain |         100 |
+| South Carolina |       3050 | 10 | Eastern  |          72 |
++----------------+------------+----+----------+-------------+
+
+
++----------------+------------+----+----------+-------------+
+| stateName      | population | id | timezone | averageTemp |
++----------------+------------+----+----------+-------------+
+| Florida        |      30000 |  1 | Eastern  |          90 |
+| New York       |      29250 |  8 | Eastern  |          42 |
+| California     |       9500 |  4 | Pacific  |          70 |
+| Virgina        |       4500 |  6 | Eastern  |          45 |
+| Tennessee      |       3500 |  5 | Central  |          50 |
+| South Carolina |       3050 | 10 | Eastern  |          72 |
+| Arizona        |       2950 |  9 | Mountain |         100 |
+| Colorado       |       2500 |  3 | Mountain |          30 |
+| Ohio           |       2250 |  7 | Eastern  |          35 |
+| Maine          |       2000 |  2 | Eastern  |          30 |
++----------------+------------+----+----------+-------------+
+
+
+mysql> select * from states where averageTemp > 50
+    -> ;
++----------------+------------+----+----------+-------------+
+| stateName      | population | id | timezone | averageTemp |
++----------------+------------+----+----------+-------------+
+| Florida        |      30000 |  1 | Eastern  |          90 |
+| California     |       9500 |  4 | Pacific  |          70 |
+| Arizona        |       2950 |  9 | Mountain |         100 |
+| South Carolina |       3050 | 10 | Eastern  |          72 |
++----------------+------------+----+----------+-------------+
+4 rows in set (0.00 sec)
+((the best places to live))
 
 PART TWO. 35 points.
 
