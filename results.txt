@@ -1,0 +1,56 @@
+mysql> select * from states order by stateName;
++----------------+------------+----+----------+-------------+
+| stateName      | population | id | timezone | averageTemp |
++----------------+------------+----+----------+-------------+
+| Alabama        |      21250 | 11 | Central  |          65 |
+| Alaska         |       2250 | 12 | Mountain |          35 |
+| Arizona        |       2950 |  9 | Mountain |         100 |
+| Arkansas       |       2250 | 13 | Central  |          35 |
+| California     |       9500 |  4 | Pacific  |          70 |
+| Colorado       |       2500 |  3 | Mountain |          30 |
+| Connectiut     |       2250 | 14 | Eastern  |          35 |
+| Delaware       |       2250 | 15 | Eastern  |          25 |
+| Florida        |      30000 |  1 | Eastern  |          90 |
+| Georgia        |       2050 | 16 | Eastern  |         -35 |
+| Hawaii         |       2250 | 17 | Pacific  |          35 |
+| Idaho          |      22050 | 18 | Mountain |          25 |
+| Illinois       |      20250 | 19 | Mountain |          15 |
+| Indiana        |      29250 | 20 | Mountain |          35 |
+| Iowa           |      22850 | 21 | Mountain |          35 |
+| Kansas         |      22950 | 22 | Central  |          55 |
+| Kentucky       |       2250 | 23 | Central  |          35 |
+| Louisiana      |          2 | 24 | Central  |          35 |
+| Maine          |       2000 |  2 | Eastern  |          30 |
+| Maryland       |      24250 | 25 | Eastern  |          35 |
+| Massachusetts  |      22250 | 26 | Eastern  |          35 |
+| Michigan       |      22570 | 27 | Central  |          55 |
+| Minnesota      |     266250 | 28 | Central  |          35 |
+| Mississippi    |      26250 | 29 | Central  |          35 |
+| Missouri       |      22580 | 30 | Central  |          95 |
+| Montana        |      22650 | 31 | Mountain |          35 |
+| Nebraska       |        250 | 32 | Mountain |          35 |
+| New Hampshire  |         20 | 33 | Eastern  |          35 |
+| New Jersey     |      29250 | 34 | Eastern  |          95 |
+| New Mexico     |      22850 | 35 | Central  |          35 |
+| New York       |      29250 |  8 | Eastern  |          42 |
+| North Carolina |      22590 | 36 | Eastern  |          35 |
+| North Dakota   |      28250 | 37 | Central  |          33 |
+| Ohio           |       2250 |  7 | Eastern  |          35 |
+| Oklahoma       |      22650 | 38 | Central  |          35 |
+| Oregon         |      52250 | 39 | Pacific  |          35 |
+| Pennsylvania   |      26250 | 40 | Eastern  |          35 |
+| Rhode Island   |      22550 | 41 | Eastern  |          65 |
+| South Carolina |       3050 | 10 | Eastern  |          72 |
+| South dakota   |     244250 | 42 | Central  |          38 |
+| Tennessee      |       3500 |  5 | Central  |          50 |
+| Texas          |     226750 | 43 | Central  |          35 |
+| Utah           |      26250 | 44 |          |          33 |
+| Vermont        |      22560 | 45 | Eastern  |          35 |
+| Virgina        |       4500 |  6 | Eastern  |          45 |
+| Virginia       |      22550 | 48 | Eastern  |          35 |
+| Washington     |      25250 | 46 | Pacific  |           3 |
+| West Virigina  |      22550 | 47 | Eastern  |           5 |
+| Wisconsin      |      26250 | 49 | Central  |          25 |
+| Wyoming        |      23250 | 50 | Mountain |          35 |
++----------------+------------+----+----------+-------------+
+50 rows in set (0.00 sec)
